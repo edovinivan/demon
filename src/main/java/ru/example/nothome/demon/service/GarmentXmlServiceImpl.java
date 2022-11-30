@@ -1,6 +1,7 @@
 package ru.example.nothome.demon.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.example.nothome.demon.mapper.GarmentMapper;
 import ru.example.nothome.demon.model.entity.Garment;
@@ -20,11 +21,12 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class GarmentXmlServiceImpl implements GarmentXmlService{
 
     private final GarmentMapper garmentMapper;
 
-    private final GarmentRepository garmentRepository;
+    private final GarmentDbService garmentDbService;
 
     @Override
     public List<Garment> list() {
@@ -34,26 +36,34 @@ public class GarmentXmlServiceImpl implements GarmentXmlService{
             context = JAXBContext.newInstance(GarmentsXml.class);
             GarmentsXml ls = (GarmentsXml) context.createUnmarshaller().unmarshal(new FileReader("C:\\Users\\edovin.ivan\\Downloads\\123.xml", Charset.forName("UTF-8")));
 
-            List<Garment> garmentList1 = garmentMapper.mapXmlToEntity(ls.getGarmentXml());
-            System.out.println(garmentList1.size());
+            garmentList = garmentMapper.mapXmlToEntity(ls.getGarmentXml());
 
-            ls.getGarmentXml().forEach(it-> {
-                garmentList.add(garmentMapper.mapXmlToEntity(it));
-            });
-
-
-            List<Garment> garments = garmentRepository.saveAll(garmentList.stream()
-                    .filter(t1 -> !t1.getTextsite().isEmpty() && t1.getTextsite().trim().length()>2)
-                    .collect(Collectors.toList())
-            );
-
-
-            System.out.println(garments.size());
+//            List<Garment> garments = garmentRepository.saveAll(garmentList.stream()
+//                    .filter(t1 -> !t1.getTextsite().isEmpty() && t1.getTextsite().trim().length()>2)
+//                    .collect(Collectors.toList())
+//            );
 
         } catch (JAXBException | FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        return garmentList;
+    }
+
+    @Override
+    public List<Garment> loadXmlGarments(GarmentsXml garmentsXml) {
+        log.info("Convert xmlObject to Entity");
+        List<Garment> garmentList = garmentMapper.mapXmlToEntity(garmentsXml.getGarmentXml());
+        if(!garmentList.isEmpty()){
+            garmentList.forEach(it ->{
+                Garment garment = garmentDbService.getByArticle(it.getArticle());
+                if(garment != null){
+                    it.setId(garment.getId());
+                }
+                it = garmentDbService.save(it);
+            });
+
         }
         return garmentList;
     }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Garments>
+    <Garment article=" 3/19113-П" date="2020-06-18" name="Костюм летний спортивный" price="0.0000">
+        <textsite> Костюм летний спортивный состоит из бриджей и футболки.
+            Бриджи из кулирки с лайкрой набивка. На подрезных частях
+            передних половинок настрочено по два лампаса из полтна
+            футболки. Футболка с коротким втачным рукавом и плечевой
+            вставкой из полотна бриджей. Полочку украшает принт.</textsite>
+        <otv>Быстрова </otv>
+        <beika>Бейка из основного полотна. На бейку - 1,5 см. Лампасы из интерлока в цвет основного полотна. На лампасы - 1,1 см на одно изделие.  </beika>
+        <texts>Длина резинки по размерам, см: 42 - 59; 44 - 62; 46 - 65; 48 - 68; 50 - 71; 52 - 74; 54 - 77; 56 - 80. </texts>
+        <razm1 gruppa_id="7" gruppa_name="Взрослые" id="114" name="42" nom="11"/>
+        <razmend gruppa_id="7" gruppa_name="Взрослые" id="121" name="56" nom="18"/>
+        <raskladchik1 name="3,2 см на одну иглу" nom="1"/>
+        <raskladchik2 name="Нет" nom="0"/>
+        <status>2</status>
+        <tipmodel id="7" koef="0.5000" name="Костюмы все"/>
+        <info PM1="46.0000" PM1_1="49.5000" PM1_2="34.0000" PM1_3="39.5000" PM1_4="64.5000" PM1_5="18.0000" PM1_6="63.5000" PM1_7="43.5000" PM1_8="17.0000" PM1_9="13.5000" PM2="170.0000" PM2_1="1.0000" PM2_2="1.0000" PM2_3="1.0000" PM2_4="1.0000" PM2_5="1.0000" PM2_6="1.0000" PM2_7="1.0000" PM2_8="0.5000" PM2_9="0.5000" PM3="1" PM3_1="0" PM3_2="0" PM3_3="0" PM3_4="0" PM3_5="0" PM3_6="0" PM3_7="0" PM3_8="0" PM3_9="0" PM4="1"/>
+        <materials doptext="Материалы для модели">
+            <material color_id="5" color_n_id="92" color_n_name="Цвет основного п-тна" color_name="Белый" qty="6.0000" qty_end="0.0000" qty_start="0.0980" tipproduct_id="1" tipproduct_name="Основное">
+                <prod id="94" koef="1.0000" measure="кг" name="Кулирка (пачка) г/к 100% х/б, кг" prodgruppa_id="5" prodgruppa_name="Кулирка х/б"/>
+            </material>
+            <material color_id="15" color_n_id="93" color_n_name="Цвет отделочного п-тна" color_name="Джинса" qty="8.0000" qty_end="0.0000" qty_start="0.1200" tipproduct_id="2" tipproduct_name="Отделка 1">
+                <prod id="99" koef="1.2000" measure="кг" name="Кулирка L 30/1 (пачка) г/к 92% х/б 8% L, кг" prodgruppa_id="5" prodgruppa_name="Кулирка х/б"/>
+            </material>
+        </materials>
+        <furnituras doptext="Фурнитура для модели">
+            <furnitura color_id="108" color_name="Белый" qty="0.7000">
+                <prod id="433" koef="1.0000" measure="метр" name="Резина 30 мм" prodgruppa_id="25" prodgruppa_name="Резина"/>
+            </furnitura>
+            <furnitura color_id="196" color_name="Прозрачный" qty="1.0000">
+                <prod id="899" koef="1.0000" measure="шт." name="Пакет упаковочный 30*40" prodgruppa_id="23" prodgruppa_name="Упаковка"/>
+            </furnitura>
+        </furnituras>
+        <vichivkas doptext="Детали с вышивкой"/>
+        <prints doptext="Детали с принтом">
+            <print id="2" name="Полочка"/>
+        </prints>
+        <sablons doptext="Шаблоны"/>
+        <kleevayas doptext="Клеевая"/>
+        <chexs doptext="Цеха где используется">
+            <chex name="Советская" vals="1"/>
+            <chex name="Солмановка" vals="1"/>
+        </chexs>
+        <termos doptext="Детали с термо печатью"/>
+        <operations doptext="Операции">
+            <operation nom="1" op_id="96" op_idg="6" op_name="1 намеловка" op_nameg="Ручное" qty="1" rab="" razr_id="3" razr_nom="2,3" razr_pric="107.0000" summao="0.73" texts="Наметить лампасы по линейке на подрезных деталях бриджей ." times="24.50"/>
+            <operation nom="2" op_id="80" op_idg="5" op_name="1 лампас" op_nameg="Спец. машины" qty="1" rab="" razr_id="5" razr_nom="4" razr_pric="130.0000" summao="1.99" texts="Настрочить лампасы в два ручейка по намеловке ( два ручейка одновременно ) ." times="55.20"/>
+            <operation nom="3" op_id="2" op_idg="2" op_name="1 оверлок" op_nameg="Оверлок" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="7.50" texts="Притачать передние детали рукавов к пройме полочки . Притачать задние детали рукавов к пройме спинки . Притачать плечевые вставки к полочке . Притачать плечевую вставку с правой стороны спинки ." times="216.00"/>
+            <operation nom="4" op_id="54" op_idg="2" op_name="2 оверлок" op_nameg="Оверлок" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="10.17" texts="У бриджей к передним половинкам притачать подрезные детали . Стачать передний и задний швы сидения . Стачать боковые срезы . Стачать шаговый срез . Нарезать и стачать резину по размеру и притачать ее к верхнему срезу бриджей ." times="293.00"/>
+            <operation nom="5" op_id="60" op_idg="1" op_name="1 распошив" op_nameg="Распошив" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="4.66" texts="Распошить низ ( ножки ) у бридж подгибкой 2 см. Распошить верхний срез с резиной ." times="134.20"/>
+            <operation nom="6" op_id="61" op_idg="1" op_name="2 распошив" op_nameg="Распошив" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="2.53" texts="Отстрочить на пятинитке ( нитками в цвет плечевых вставок ) швы притачивания вставок по полочке и спинке ." times="72.80"/>
+            <operation nom="7" op_id="72" op_idg="4" op_name="1 бейка" op_nameg="Бейка" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="1.42" texts="Окантовать срез горловины ." times="40.80"/>
+            <operation nom="8" op_id="55" op_idg="2" op_name="3 оверлок" op_nameg="Оверлок" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="1.47" texts="Притачать плечевую вставку с левой стороны спинки с закрепкой по бейке ." times="42.20"/>
+            <operation nom="9" op_id="62" op_idg="1" op_name="3 распошив" op_nameg="Распошив" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="1.97" texts="Отстрочить на пятинитке шов притачивания вставки с левой стороны спинки ( по бейке закрепить распошивальную строчку ) ." times="56.60"/>
+            <operation nom="10" op_id="56" op_idg="2" op_name="4 оверлок" op_nameg="Оверлок" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="2.82" texts="У футболки стачать рукавно-боковые срезы ." times="81.20"/>
+            <operation nom="11" op_id="63" op_idg="1" op_name="4 распошив" op_nameg="Распошив" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="5.48" texts="Распошить на пятинитке низ футболки и нижний срез рукавов подгибкой 2,5 см." times="157.80"/>
+            <operation nom="12" op_id="78" op_idg="5" op_name="1 закрепка" op_nameg="Спец. машины" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="0.45" texts="Поставить закрепку по бейке - 1 шт. " times="13.00"/>
+            <operation nom="13" op_id="104" op_idg="6" op_name="выворот" op_nameg="Ручное" qty="1" rab="" razr_id="1" razr_nom="1" razr_pric="84.0000" summao="0.72" texts="Вывернуть готовое изделие ." times="30.80"/>
+            <operation nom="14" op_id="100" op_idg="6" op_name="ВТО" op_nameg="Ручное" qty="1" rab="" razr_id="2" razr_nom="2" razr_pric="86.0000" summao="2.83" texts="Окончательное ВТО изделия ." times="118.60"/>
+            <operation nom="15" op_id="99" op_idg="6" op_name="упаковка" op_nameg="Ручное" qty="1" rab="" razr_id="1" razr_nom="1" razr_pric="84.0000" summao="1.00" texts="Маркировка и навешивание картонной этикетки . Упаковать готовое изделие в пакет ( 28*35 , 30*40 ) ." times="43.00"/>
+        </operations>
+        <fotos doptext="Фотографии">
+            <foto fil_id="6301" hau="1" name="WhatsApp Image 2019-01-17 at 09.26.53(1).jpeg"/>
+        </fotos>
+    </Garment>
+    <Garment article=" 3/1993" date="2020-05-26" name="Шорты" price="0.0000">
+        <textsite> 3/1856 Шорты женские из ткани х/б с лайкрой.
+            Для лучшей посадки по линии талии в цельнокроеном поясе
+            задних половинок проложена и зафиксирована эластичная
+            резиновая тесьма. Стрейчевое полотно обеспечивает удобство
+            при одевании, так как отсутствует гульф.</textsite>
+        <otv>по 3/1856 </otv>
+        <beika> </beika>
+        <texts>Длина резины по размерам - р.42-61см. , р.44-65см. , р.46-69см. , р.48-73см. , р.50-77см. , р.52-81см. , р.54-85см. , р.56-90см. </texts>
+        <razm1 gruppa_id="3" gruppa_name="НА УДАЛЕНИЕ" id="38" name="42" nom="3"/>
+        <razmend gruppa_id="7" gruppa_name="Взрослые" id="121" name="56" nom="18"/>
+        <raskladchik1 name="Нет" nom="0"/>
+        <raskladchik2 name="Нет" nom="0"/>
+        <status>2</status>
+        <tipmodel id="16" koef="0.5000" name="Велосипедки,бриджи,капри,шорты"/>
+        <info PM1="0.0000" PM1_1="0.0000" PM1_2="0.0000" PM1_3="0.0000" PM1_4="0.0000" PM1_5="0.0000" PM1_6="0.0000" PM1_7="0.0000" PM1_8="0.0000" PM1_9="0.0000" PM2="0.0000" PM2_1="0.0000" PM2_2="0.0000" PM2_3="0.0000" PM2_4="0.0000" PM2_5="0.0000" PM2_6="0.0000" PM2_7="0.0000" PM2_8="0.0000" PM2_9="0.0000" PM3="0" PM3_1="0" PM3_2="0" PM3_3="0" PM3_4="0" PM3_5="0" PM3_6="0" PM3_7="0" PM3_8="0" PM3_9="0" PM4="0"/>
+        <materials doptext="Материалы для модели">
+            <material color_id="64" color_n_id="92" color_n_name="Цвет основного п-тна" color_name="Полоска" qty="12.0000" qty_end="0.0000" qty_start="0.1500" tipproduct_id="1" tipproduct_name="Основное">
+                <prod id="135" koef="1.2000" measure="кг" name="Футер петля L (рулон) набивка 95% х/б 5% L, кг" prodgruppa_id="6" prodgruppa_name="Футер"/>
+            </material>
+        </materials>
+        <furnituras doptext="Фурнитура для модели">
+            <furnitura color_id="108" color_name="Белый" qty="0.7700">
+                <prod id="246" koef="1.0000" measure="метр" name="Резина 50 мм, м" prodgruppa_id="21" prodgruppa_name="НА УДАЛЕНИЕ"/>
+            </furnitura>
+            <furnitura color_id="518" color_name="Однотонный ( в цвет набивки )" qty="0.6000">
+                <prod id="443" koef="1.0000" measure="метр" name="Шнур широкий хб" prodgruppa_id="29" prodgruppa_name="Шнур"/>
+            </furnitura>
+            <furnitura color_id="108" color_name="Белый" qty="0.3500">
+                <prod id="718" koef="1.0000" measure="метр" name="Лента/шов (1/100м)" prodgruppa_id="30" prodgruppa_name="Лента"/>
+            </furnitura>
+            <furnitura color_id="196" color_name="Прозрачный" qty="1.0000">
+                <prod id="902" koef="1.0000" measure="шт." name="Пакет упаковочный 23*35" prodgruppa_id="23" prodgruppa_name="Упаковка"/>
+            </furnitura>
+        </furnituras>
+        <vichivkas doptext="Детали с вышивкой"/>
+        <prints doptext="Детали с принтом"/>
+        <sablons doptext="Шаблоны">
+            <sablon id="1" name="Шаблон петли" qty="1"/>
+        </sablons>
+        <kleevayas doptext="Клеевая">
+            <kleevaya id="43" name="Клеевая для петель" qty="1"/>
+        </kleevayas>
+        <chexs doptext="Цеха где используется"/>
+        <termos doptext="Детали с термо печатью"/>
+        <operations doptext="Операции">
+            <operation nom="1" op_id="82" op_idg="5" op_name="1 петля" op_nameg="Спец. машины" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="1.70" texts="Наметить по шаблону и пробить 2 петли на поясе ( подкладывая клеевую ) ." times="49.00"/>
+            <operation nom="2" op_id="64" op_idg="3" op_name="1 швейка" op_nameg="Швейка" qty="1" rab="" razr_id="3" razr_nom="2,3" razr_pric="107.0000" summao="1.01" texts="Нарезать и стачать резину на 5 см." times="34.00"/>
+            <operation nom="3" op_id="65" op_idg="3" op_name="2 швейка" op_nameg="Швейка" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="13.04" texts="Притачать мешковину с тесьмой к передним половинкам шорт . Отстрочить вход в карман на лапку швейной машины . Закрепить вторую мешковину по верхнему и боковому срезам . Стачать боковые срезы пояса на лапку швейной машины . Сложить пояс пополам и раскладывая боковые швы вложить внутрь пояса резину и делая равномерную посадку закрепить пояс на 0,1 см. по нижнему срезу в кольцо ." times="375.60"/>
+            <operation nom="4" op_id="66" op_idg="3" op_name="3 швейка" op_nameg="Швейка" qty="1" rab="" razr_id="3" razr_nom="2,3" razr_pric="107.0000" summao="2.19" texts="Отрезать шнурок по размерам и застрочить концы ( заправляя их внутрь ) ." times="73.80"/>
+            <operation nom="5" op_id="2" op_idg="2" op_name="1 оверлок" op_nameg="Оверлок" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="13.44" texts="Обметать мешковины карманов . Стачать передний и задний швы сидения . Стачать боковые срезы задних и передних половинок шорт . Стачать шаговые срезы . Притачать пояс вместе с резиной к верхнему срезу шорт . Стачать боковые срезы манжет и притачать их к низу ( ножкам ) шорт швом налицо ." times="387.00"/>
+            <operation nom="6" op_id="60" op_idg="1" op_name="1 распошив" op_nameg="Распошив" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="3.86" texts="Отстрочить шов притачивания манжет по низу ( одна игла должна пройти по шву , а вторая по изделию ) ." times="111.20"/>
+            <operation nom="7" op_id="78" op_idg="5" op_name="1 закрепка" op_nameg="Спец. машины" qty="1" rab="" razr_id="4" razr_nom="3" razr_pric="125.0000" summao="4.38" texts="Вывернуть готовое изделие и поставить закрепки на отворотах манжет -8 шт. ( по боковому, шаговому швам и по центру передней и задней половинках шорт ) и 3 шт. ( на поясе по боковым и заднему шву сидения ) . Всего 11 закрепок ." times="126.00"/>
+            <operation nom="8" op_id="106" op_idg="6" op_name="шнур" op_nameg="Ручное" qty="1" rab="" razr_id="1" razr_nom="1" razr_pric="84.0000" summao="0.44" texts="Вставить шнур в пояс шорт ( обманку ) и завязать бантиком ." times="18.80"/>
+            <operation nom="9" op_id="100" op_idg="6" op_name="ВТО" op_nameg="Ручное" qty="1" rab="" razr_id="2" razr_nom="2" razr_pric="86.0000" summao="1.20" texts="Окончательное ВТО изделия ." times="50.40"/>
+            <operation nom="10" op_id="99" op_idg="6" op_name="упаковка" op_nameg="Ручное" qty="1" rab="" razr_id="1" razr_nom="1" razr_pric="84.0000" summao="1.00" texts="Маркировка и навешевание картонной этикетки . Упаковать готовое изделие в пакет ( 23*35 ) ." times="43.00"/>
+        </operations>
+        <fotos doptext="Фотографии">
+            <foto fil_id="6252" hau="1" name="3_1993.jpg"/>
+        </fotos>
+    </Garment>
+</Garments>
