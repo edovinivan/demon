@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import ru.example.nothome.demon.mapper.GarmentMapper;
 import ru.example.nothome.demon.model.entity.Garment;
 import ru.example.nothome.demon.model.xml.entity.GarmentsXml;
+import ru.example.nothome.demon.repository.GarmentRepository;
 
 
 import javax.xml.bind.JAXBContext;
@@ -15,12 +16,15 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class GarmentXmlServiceImpl implements GarmentXmlService{
 
     private final GarmentMapper garmentMapper;
+
+    private final GarmentRepository garmentRepository;
 
     @Override
     public List<Garment> list() {
@@ -30,11 +34,21 @@ public class GarmentXmlServiceImpl implements GarmentXmlService{
             context = JAXBContext.newInstance(GarmentsXml.class);
             GarmentsXml ls = (GarmentsXml) context.createUnmarshaller().unmarshal(new FileReader("C:\\Users\\edovin.ivan\\Downloads\\123.xml", Charset.forName("UTF-8")));
 
+            List<Garment> garmentList1 = garmentMapper.mapXmlToEntity(ls.getGarmentXml());
+            System.out.println(garmentList1.size());
+
             ls.getGarmentXml().forEach(it-> {
                 garmentList.add(garmentMapper.mapXmlToEntity(it));
             });
 
-            System.out.println(garmentList.size());
+
+            List<Garment> garments = garmentRepository.saveAll(garmentList.stream()
+                    .filter(t1 -> !t1.getTextsite().isEmpty() && t1.getTextsite().trim().length()>2)
+                    .collect(Collectors.toList())
+            );
+
+
+            System.out.println(garments.size());
 
         } catch (JAXBException | FileNotFoundException e) {
             throw new RuntimeException(e);
