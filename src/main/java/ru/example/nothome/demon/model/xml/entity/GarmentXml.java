@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GarmentXml {
     @XmlAttribute
-    private String article;
+    private String Article;
     @XmlAttribute
     private String name;
 

@@ -1,12 +1,19 @@
 package ru.example.nothome.demon.mapper;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.NullValuePropertyMappingStrategy;
+import ru.example.nothome.demon.model.dto.GarmentDto;
+import ru.example.nothome.demon.model.entity.Garment;
+import ru.example.nothome.demon.model.xml.entity.GarmentXml;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface GarmentMapper {
-    ru.example.nothome.demon.model.xml.entity.GarmentXml mapEntityToXml(ru.example.nothome.demon.model.entity.Garment garment);
-    ru.example.nothome.demon.model.entity.Garment mapXmlToEntity(ru.example.nothome.demon.model.xml.entity.GarmentXml garment);
-    ru.example.nothome.demon.model.dto.GarmentDto mapEntityToDto(ru.example.nothome.demon.model.entity.Garment garmentDto);
-    ru.example.nothome.demon.model.entity.Garment mapDtoToEntity(ru.example.nothome.demon.model.dto.GarmentDto garment);
+    GarmentXml mapEntityToXml(Garment garment);
+    Garment mapXmlToEntity(GarmentXml garment);
+    GarmentDto mapEntityToDto(Garment garmentDto);
+    Garment mapDtoToEntity(GarmentDto garment);
+    List<Garment> mapXmlToEntity(List<GarmentXml> garment);
 }
