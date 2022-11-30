@@ -5,8 +5,8 @@ spring:
     url: jdbc:postgresql://127.0.0.1:5432/demon
   jpa:
     hibernate:
-      ddl-auto: create
-    show-sql: false
+      ddl-auto: update
+    show-sql: true
     open-in-view: true
 
 

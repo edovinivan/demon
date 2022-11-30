@@ -4,9 +4,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import ru.example.nothome.demon.mapper.GarmentMapper;
 import ru.example.nothome.demon.model.dto.GarmentDto;
 import ru.example.nothome.demon.model.entity.Garment;
@@ -58,6 +57,11 @@ public class GarmentLoadController {
     }
 
 
+    @PostMapping("/load-list-xml")
+    public ResponseEntity loadlist(@RequestBody @Validated GarmentsXml garmentsXml){
+        List<Garment> garments = garmentXmlService.loadXmlGarments(garmentsXml);
+        return ResponseEntity.ok("Save " + garments.size() + " object!");
+    }
 
 
 
