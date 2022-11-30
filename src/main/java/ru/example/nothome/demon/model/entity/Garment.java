@@ -16,9 +16,11 @@ public class Garment implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String Article;
     private String name;
+
+    @Column(name = "textsite", length = 2000)
     private String textsite;
 }

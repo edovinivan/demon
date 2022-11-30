@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import ru.example.nothome.demon.mapper.GarmentMapper;
 import ru.example.nothome.demon.model.entity.Garment;
 import ru.example.nothome.demon.model.xml.entity.GarmentsXml;
+import ru.example.nothome.demon.repository.GarmentRepository;
 
 
 import javax.xml.bind.JAXBContext;
@@ -22,6 +23,8 @@ public class GarmentXmlServiceImpl implements GarmentXmlService{
 
     private final GarmentMapper garmentMapper;
 
+    private final GarmentRepository garmentRepository;
+
     @Override
     public List<Garment> list() {
         List<Garment> garmentList = new ArrayList<>();
@@ -33,6 +36,8 @@ public class GarmentXmlServiceImpl implements GarmentXmlService{
             ls.getGarmentXml().forEach(it-> {
                 garmentList.add(garmentMapper.mapXmlToEntity(it));
             });
+
+            garmentRepository.save(garmentList.get(0));
 
             System.out.println(garmentList.size());
 
