@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "garment")
@@ -12,6 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 public class Garment implements Serializable {
 
     @Id
@@ -23,4 +26,9 @@ public class Garment implements Serializable {
 
     @Column(name = "textsite", length = 2000)
     private String textsite;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name="garment_id", nullable=false)
+    List<Material> material;
+
 }
