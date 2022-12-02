@@ -2,7 +2,9 @@ package ru.example.nothome.demon.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.annotation.Transient;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.example.nothome.demon.mapper.GarmentMapper;
 import ru.example.nothome.demon.model.entity.Garment;
 import ru.example.nothome.demon.model.entity.Material;
@@ -31,21 +33,16 @@ public class GarmentXmlServiceImpl implements GarmentXmlService{
 
     private final GarmentDbService garmentDbService;
 
+
     @Override
     public List<Garment> loadXmlGarments(GarmentsXml garmentsXml) {
         log.info("Convert xmlObject to Entity");
         List<Garment> garmentList = garmentMapper.mapXmlToEntity(garmentsXml.getGarmentXml());
+
+
         if(!garmentList.isEmpty()){
             garmentList.forEach(it ->{
                 System.out.println(it);
-                /*Garment garment = garmentDbService.getByArticle(it.getArticle());
-                if(garment != null){
-                    it.setId(garment.getId());
-                }*/
-                /*Material mat = new Material();
-                mat.setColor("dfdsfds");
-                mat.setQty(new BigDecimal(123));
-                it.setMaterial(Arrays.asList(mat));*/
                 it = garmentDbService.save(it);
             });
 

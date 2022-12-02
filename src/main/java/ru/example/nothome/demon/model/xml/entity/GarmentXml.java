@@ -21,4 +21,7 @@ public class GarmentXml {
     @XmlElement(name = "materials")
     MaterialsXml materials;
 
+    @XmlElement(name = "operations")
+    OperationsXml operations;
+
 }

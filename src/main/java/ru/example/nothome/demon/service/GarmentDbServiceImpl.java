@@ -16,7 +16,8 @@ public class GarmentDbServiceImpl implements GarmentDbService{
 
     @Override
     public Garment save(Garment garment) {
-        return garmentRepository.save(garment);
+        Garment save = garmentRepository.save(garment);
+        return save;
     }
 
     @Override
@@ -35,5 +36,10 @@ public class GarmentDbServiceImpl implements GarmentDbService{
     @Override
     public List<Garment> savaAll(List<Garment> garmentList) {
         return garmentRepository.saveAll(garmentList);
+    }
+
+    @Override
+    public void delete(Long d) {
+        garmentRepository.deleteById(d);
     }
 }

@@ -11,6 +11,7 @@ import ru.example.nothome.demon.model.dto.GarmentDto;
 import ru.example.nothome.demon.model.entity.Garment;
 import ru.example.nothome.demon.model.xml.entity.GarmentXml;
 import ru.example.nothome.demon.model.xml.entity.GarmentsXml;
+import ru.example.nothome.demon.repository.GarmentRepository;
 import ru.example.nothome.demon.service.GarmentXmlService;
 
 import javax.xml.bind.JAXBContext;
@@ -34,6 +35,8 @@ public class GarmentLoadController {
 
     private final GarmentXmlService garmentXmlService;
 
+    private final GarmentRepository garmentRepository;
+
     /**
      * Загрузка данных
      * @param garmentsXml
@@ -45,8 +48,26 @@ public class GarmentLoadController {
         garmentsXml.getGarmentXml().forEach(System.out::println);
 
         List<Garment> garments = garmentXmlService.loadXmlGarments(garmentsXml);
+
         return ResponseEntity.ok("Save " + garments.size() + " object!");
     }
+
+
+    @GetMapping("/get-list-xml")
+    public ResponseEntity getList(){
+
+        //garmentsXml.getGarmentXml().forEach(System.out::println);
+
+        garmentRepository.save(Garment.builder().article("fdsafd").build());
+
+
+        garmentRepository.findAllByArticle("asdfsdf");
+
+
+        return ResponseEntity.ok("Save ");
+    }
+
+
 
 
 

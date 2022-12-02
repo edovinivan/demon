@@ -9,4 +9,10 @@ public interface GarmentDbService{
     Garment getById(Long id);
     Garment getByArticle(String article);
     List<Garment> savaAll(List<Garment> garmentList);
+
+    void delete(Long d);
+
+
+
+
 }
