@@ -12,6 +12,8 @@ public interface GarmentDbService{
 
     void delete(Long d);
 
+    List<Garment> getAllList();
+
 
 
 

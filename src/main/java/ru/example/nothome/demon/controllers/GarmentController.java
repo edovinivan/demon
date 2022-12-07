@@ -1,17 +1,32 @@
 package ru.example.nothome.demon.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import ru.example.nothome.demon.model.entity.Garment;
+import ru.example.nothome.demon.service.GarmentService;
+
+import java.util.List;
 
 @RestController
-@RequestMapping("/model")
+@RequestMapping("/garment")
+@RequiredArgsConstructor
 public class GarmentController {
 
-    @GetMapping("/list")
-    public String list(){
+    private final GarmentService garmentService;
+
+    @GetMapping("/get-by-id")
+    public String getById(@RequestBody @Validated Long id){
         return "list";
     }
+
+    @GetMapping("/get-all-list")
+    public @ResponseBody ResponseEntity<List<Garment>> getAllList(){
+        return ResponseEntity.ok(garmentService.getAllList());
+    }
+
 
 
 }

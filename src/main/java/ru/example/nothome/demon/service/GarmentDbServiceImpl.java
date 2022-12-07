@@ -42,4 +42,9 @@ public class GarmentDbServiceImpl implements GarmentDbService{
     public void delete(Long d) {
         garmentRepository.deleteById(d);
     }
+
+    @Override
+    public List<Garment> getAllList() {
+        return garmentRepository.findAll();
+    }
 }
