@@ -9,6 +9,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Объект содержащий описание модели
+ */
 @Entity
 //@EntityListeners(GarmentListener.class)
 @Table(name = "garment")
@@ -22,17 +25,32 @@ public class Garment implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * Артикул
+     */
     private String article;
 
+    /**
+     * Название
+     */
     private String name;
 
+    /**
+     * Описание для сайта
+     */
     @Column(name = "textsite", length = 2000)
     private String textsite;
 
+    /**
+     * Материалы
+     */
     @OneToMany(cascade = CascadeType.PERSIST, orphanRemoval = true)
     @JoinColumn(name="garment_id", nullable=false)
     private List<Material> material;
 
+    /**
+     * Операции
+     */
     @OneToMany(cascade = CascadeType.PERSIST, orphanRemoval = true)
     @JoinColumn(name="operation_id", nullable=false)
     private List<Operation> operation;
