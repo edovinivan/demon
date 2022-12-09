@@ -18,6 +18,9 @@ import java.util.Set;
 @Data
 public class Garment implements Serializable {
 
+    /**
+     * Идентификатор
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
