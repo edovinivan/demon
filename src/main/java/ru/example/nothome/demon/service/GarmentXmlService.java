@@ -6,6 +6,5 @@ import ru.example.nothome.demon.model.xml.entity.GarmentsXml;
 import java.util.List;
 
 public interface GarmentXmlService {
-    List<Garment> list();
-    List<Garment> loadXmlGarments(GarmentsXml garmentsXml);
+       List<Garment> loadXmlGarments(GarmentsXml garmentsXml);
 }

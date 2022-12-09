@@ -11,4 +11,7 @@ import java.util.Optional;
 @Repository
 public interface GarmentRepository extends JpaRepository<Garment, Long> {
     List<Garment> findAllByArticle(String article);
+
+
+
 }

@@ -7,6 +7,8 @@ import ru.example.nothome.demon.model.entity.Garment;
 import ru.example.nothome.demon.repository.GarmentRepository;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -16,12 +18,13 @@ public class GarmentDbServiceImpl implements GarmentDbService{
 
     @Override
     public Garment save(Garment garment) {
-        return garmentRepository.save(garment);
+        Garment save = garmentRepository.save(garment);
+        return save;
     }
 
     @Override
-    public Garment getById(Long id) {
-        return garmentRepository.findById(id).get();
+    public Optional<Garment> getById(Long id) throws NoSuchElementException{
+        return garmentRepository.findById(id);
     }
 
     @Override
@@ -35,5 +38,15 @@ public class GarmentDbServiceImpl implements GarmentDbService{
     @Override
     public List<Garment> savaAll(List<Garment> garmentList) {
         return garmentRepository.saveAll(garmentList);
+    }
+
+    @Override
+    public void delete(Long d) {
+        garmentRepository.deleteById(d);
+    }
+
+    @Override
+    public List<Garment> getAllList() {
+        return garmentRepository.findAll();
     }
 }

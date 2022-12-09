@@ -1,8 +1,10 @@
 package ru.example.nothome.demon.model.xml.entity;
 
 import lombok.Data;
+import ru.example.nothome.demon.model.entity.Material;
 
 import javax.xml.bind.annotation.*;
+import java.util.List;
 
 @Data
 @XmlRootElement(name = "Garment")
@@ -15,5 +17,11 @@ public class GarmentXml {
 
     @XmlElement(name = "textsite")
     private String textsite;
+
+    @XmlElement(name = "materials")
+    MaterialsXml materials;
+
+    @XmlElement(name = "operations")
+    OperationsXml operations;
 
 }

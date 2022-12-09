@@ -32,7 +32,7 @@
                 <prod id="899" koef="1.0000" measure="шт." name="Пакет упаковочный 30*40" prodgruppa_id="23" prodgruppa_name="Упаковка"/>
             </furnitura>
         </furnituras>
-        <vichivkas doptext="Детали с вышивкой"/>
+        <vichivkas doptext="Детали с вышивкой"/>  размер
         <prints doptext="Детали с принтом">
             <print id="2" name="Полочка"/>
         </prints>
