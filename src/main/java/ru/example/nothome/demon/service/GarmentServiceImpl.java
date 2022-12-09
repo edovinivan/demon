@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import ru.example.nothome.demon.model.entity.Garment;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -13,7 +15,7 @@ public class GarmentServiceImpl implements GarmentService{
     private final GarmentDbService garmentDbService;
 
     @Override
-    public Garment getById(Long id) {
+    public Optional<Garment> getById(Long id){
         return garmentDbService.getById(id);
     }
 

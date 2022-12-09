@@ -36,20 +36,6 @@ public class GarmentListener {
 
     @PostLoad
     private void testListener3(Garment garment){
-
         garmentRepository.saveAndFlush(garment);
-
-        //Garment save = garmentRepository.save(garment);
-        //garmentRepository.flush();
-
-        String f = "";
-    }
-
-
-    @PreUpdate
-    private void testListener7(Garment garment){
-        String y = "";
-        //garment.setVersion(garment.getVersion() + 1);
-        //garmentRepository.save(garment);
     }
 }

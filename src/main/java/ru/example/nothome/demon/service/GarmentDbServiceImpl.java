@@ -7,6 +7,8 @@ import ru.example.nothome.demon.model.entity.Garment;
 import ru.example.nothome.demon.repository.GarmentRepository;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -21,8 +23,8 @@ public class GarmentDbServiceImpl implements GarmentDbService{
     }
 
     @Override
-    public Garment getById(Long id) {
-        return garmentRepository.findById(id).get();
+    public Optional<Garment> getById(Long id) throws NoSuchElementException{
+        return garmentRepository.findById(id);
     }
 
     @Override
