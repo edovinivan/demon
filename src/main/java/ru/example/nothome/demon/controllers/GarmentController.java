@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/model")
 public class GarmentController {
 
+    // Jgbcfybt
     @GetMapping("/list")
     public String list(){
         return "list";
